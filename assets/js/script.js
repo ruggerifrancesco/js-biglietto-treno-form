@@ -24,7 +24,7 @@ calculatorSubmit.addEventListener("click",
         // Ticket Age Cycle
         if (ageValue.value < 0 || ageValue.value > 110) {
             getDiscountMessage = "err";
-        } else if(ageValue.value < 18) {
+        } else if (ageValue.value < 18) {
             getDiscountMessage = "Prezzo Scontato per minori 18!";
             priceTicket = priceTicket * (19.4 / 100);
         } else if (ageValue.value >= 65) {
@@ -32,11 +32,10 @@ calculatorSubmit.addEventListener("click",
             priceTicket = priceTicket * (37.7 / 100);
         } 
 
-        let getOutputMessage = priceTicket;
+        let getOutputMessage = priceTicket.toFixed(2);
 
         console.log("Prezzo biglietto:" + priceTicket.toFixed(2));
         document.getElementById("calc-ticket-output").innerHTML += 
-        // Actual Message Output
-            getOutputMessage.toFixed(2) + "&euro; " + getDiscountMessage;
+            getOutputMessage + "&euro;" + getDiscountMessage;
     }
 )
