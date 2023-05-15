@@ -1,15 +1,23 @@
 console.log("JS Ticket Form - Loaded");
 
-let distance = document.getElementById("input-distance");
-let age = document.getElementById("input-age");
+// Casting Variables
+    // Inputs
+    let distanceValue = document.getElementById("input-distance");
+    let ageValue = document.getElementById("input-age");
 
+    // Tickets
+    let priceTicket = distanceValue * 0.233;
+
+
+// Fixed Variables
 const calculatorSubmit = document.getElementById("inputs-submit");
 
 calculatorSubmit.addEventListener("click",
     function () {
         //Console message for making sure the inputs
-        //from theuser are get received correctly!
-        console.log(distance.value + " " + age.value + " " + 
+        //from the user are get received correctly!
+        console.log(distanceValue.value + " " + ageValue.value + " " + 
         "Digits Input Received Correctly");
+
     }
 )
