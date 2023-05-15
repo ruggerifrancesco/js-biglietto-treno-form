@@ -6,7 +6,7 @@ console.log("JS Ticket Form - Loaded");
     let ageValue = document.getElementById("input-age");
 
     // Tickets
-    let priceTicket = distanceValue * 0.233;
+    let priceTicket = distanceValue.value * 0.233;
     let getDiscountMessage;
     let getOutputMessage;
 
@@ -28,6 +28,8 @@ calculatorSubmit.addEventListener("click",
         } else if (ageValue.value >= 65) {
             getDiscountMessage = "Prezzo Scontato per over 65!";
             priceTicket = priceTicket * (40 / 100);
+        } else {
+            priceTicket = 0;
         }
 
         let getOutputMessage = priceTicket;
