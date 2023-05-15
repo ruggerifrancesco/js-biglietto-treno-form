@@ -7,8 +7,6 @@ const calculatorSubmit = document.getElementById("inputs-submit");
 
 calculatorSubmit.addEventListener("click",
     function () {
-        
+        console.log(distance.value + age.value + "Inputs Taken Correctly");
     }
 )
-
-console.log(distance.value + age.value + "Inputs Taken Correctly");
