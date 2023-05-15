@@ -44,7 +44,7 @@ calculatorSubmit.addEventListener("click",
             // Console Log
             console.log("Prezzo biglietto:" + priceTicket.toFixed(2));
             // DOM Element
-            document.getElementById("calc-ticket-output").innerHTML += 
-                priceTicket.toFixed(2) + "&euro;" + discountMessage;
+            document.getElementById("calc-ticket-output").innerHTML = 
+                priceTicket.toFixed(2) + "&euro; " + discountMessage;
     }
 )
