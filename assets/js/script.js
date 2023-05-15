@@ -25,13 +25,13 @@ calculatorSubmit.addEventListener("click",
         "Digits Input Received Correctly");
 
         // Validate distance input
-        if (isNaN(distanceValueNum) || distanceValueNum <= 0) {
+        if (isNaN(distanceValueNum) || distanceValueNum <= 0 ) {
             
             // Display error message if input is not a valid number or is <= 0
             document.getElementById("calc-ticket-output").innerHTML = 
                 "Errore: inserisci una distanza valida!";
             return;
-        } else if (isNaN(ageValueNum) || ageValueNum <= 0) {
+        } else if (isNaN(ageValueNum) || ageValueNum <= 0 || ageValueNum > 110) {
 
             // Display error message if input is not a valid number or is <= 0
             document.getElementById("calc-ticket-output").innerHTML = 
