@@ -21,12 +21,14 @@ calculatorSubmit.addEventListener("click",
         "Digits Input Received Correctly");
 
         // Ticket Age Cycle
-        if (ageValue < 18) {
+        if (ageValue.value < 18) {
             getDiscountMessage = "Prezzo Scontato per minori 18!";
             priceTicket = priceTicket * (20 / 100);
-        } else if (ageValue >= 65) {
+        } else if (ageValue.value >= 65) {
             getDiscountMessage = "Prezzo Scontato per over 65!";
             priceTicket = priceTicket * (40 / 100);
         }
+
+        console.log("Prezzo biglietto:" + priceTicket);
     }
 )
