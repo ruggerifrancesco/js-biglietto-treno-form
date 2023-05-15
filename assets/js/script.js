@@ -13,7 +13,7 @@ calculatorSubmit.addEventListener("click",
     function () {
         let priceTicket = distanceValue.value * 0.233;
         let discountPrice = 0;
-        let discountMessage;
+        let discountMessage = "";
 
         // Parse input values as numbers
         let distanceValueNum = parseFloat(distanceValue.value);
@@ -35,7 +35,7 @@ calculatorSubmit.addEventListener("click",
 
             // Display error message if input is not a valid age or is <= 0 or up to 110
             document.getElementById("calc-ticket-output").innerHTML = 
-                "Errore: inserisci una eta valida!";
+                "Errore: inserisci un' eta valida!";
             return;
 
         }
