@@ -32,10 +32,11 @@ calculatorSubmit.addEventListener("click",
             priceTicket = priceTicket * (37.7 / 100);
         } 
 
-        let getOutputMessage = priceTicket.toFixed(2);
-
-        console.log("Prezzo biglietto:" + priceTicket.toFixed(2));
-        document.getElementById("calc-ticket-output").innerHTML += 
-            getOutputMessage + "&euro;" + getDiscountMessage;
+        // Return State
+            // Console Log
+            console.log("Prezzo biglietto:" + priceTicket.toFixed(2));
+            // DOM Element
+            document.getElementById("calc-ticket-output").innerHTML += 
+                priceTicket.toFixed(2) + "&euro;" + getDiscountMessage;
     }
 )
