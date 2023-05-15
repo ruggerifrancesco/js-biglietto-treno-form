@@ -5,7 +5,6 @@ console.log("JS Ticket Form - Loaded");
     let distanceValue = document.getElementById("input-distance");
     let ageValue = document.getElementById("input-age");
 
-
 // Fixed Variables
 const calculatorSubmit = document.getElementById("inputs-submit");
 
@@ -16,15 +15,33 @@ calculatorSubmit.addEventListener("click",
         let discountPrice = 0;
         let discountMessage;
 
+        // Parse input values as numbers
+        let distanceValueNum = parseFloat(distanceValue.value);
+        let ageValueNum = parseInt(ageValue.value);
+
         //Console message for making sure the inputs
         //from the user are get received correctly!
         console.log(distanceValue.value + " " + ageValue.value + " " + 
         "Digits Input Received Correctly");
 
+        // Validate distance input
+        if (isNaN(distanceValueNum) || distanceValueNum <= 0) {
+            
+            // Display error message if input is not a valid number or is <= 0
+            document.getElementById("calc-ticket-output").innerHTML = 
+                "Errore: inserisci una distanza valida!";
+            return;
+        } else if (isNaN(ageValueNum) || ageValueNum <= 0) {
+
+            // Display error message if input is not a valid number or is <= 0
+            document.getElementById("calc-ticket-output").innerHTML = 
+                "Errore: inserisci una eta valida!";
+            return;
+
+        }
+
         // Ticket Age Cycle
-        if (ageValue.value <= 0 || ageValue.value > 110) {
-            discountMessage = "Dati non corretti!";
-        } else if (ageValue.value < 18) {
+        if (ageValue.value < 18) {
 
             discountPrice = priceTicket * (19.4 / 100);
             priceTicket = priceTicket - discountPrice;
