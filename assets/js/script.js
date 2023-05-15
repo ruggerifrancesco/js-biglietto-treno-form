@@ -7,6 +7,7 @@ console.log("JS Ticket Form - Loaded");
 
     // Tickets
     let priceTicket = distanceValue * 0.233;
+    let getDiscountMessage;
 
 
 // Fixed Variables
@@ -19,5 +20,13 @@ calculatorSubmit.addEventListener("click",
         console.log(distanceValue.value + " " + ageValue.value + " " + 
         "Digits Input Received Correctly");
 
+        // Ticket Age Cycle
+        if (ageValue < 18) {
+            getDiscountMessage = "Prezzo Scontato per minori 18!";
+            priceTicket = priceTicket * (20 / 100);
+        } else if (ageValue >= 65) {
+            getDiscountMessage = "Prezzo Scontato per over 65!";
+            priceTicket = priceTicket * (40 / 100);
+        }
     }
 )
