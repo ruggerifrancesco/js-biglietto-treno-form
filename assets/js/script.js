@@ -8,6 +8,7 @@ console.log("JS Ticket Form - Loaded");
     // Tickets
     let priceTicket = distanceValue * 0.233;
     let getDiscountMessage;
+    let getOutputMessage;
 
 
 // Fixed Variables
@@ -29,6 +30,9 @@ calculatorSubmit.addEventListener("click",
             priceTicket = priceTicket * (40 / 100);
         }
 
+        let getOutputMessage = priceTicket;
+
         console.log("Prezzo biglietto:" + priceTicket);
+        document.getElementById("calc-ticket-output").innerHTML += getOutputMessage;
     }
 )
